@@ -3,7 +3,7 @@ Allows jar and war files that contain nested jar dependencies to be
 run using `java -jar archive.jar`.
 
 ## Design Goals
-* Dependencies do need to be unpacked or modified in order to be used
+* Dependencies do not need to be unpacked or modified in order to be used
 * Temporary files are not be written in order to load nested jars
 * Minimal memory consumption when working with packaged files
 * Support the generation of executable war files (similar to Jenkins)
@@ -36,7 +36,7 @@ unpacked in the root of the jar. The `MANIFEST.MF` file should contain the follo
 	Start-Class: <your main class>
 	Main-Class: org.springframework.binks.JarLauncher
 
-See [binks-executable-war sample](https://github.com/philwebb/binks/tree/master/binks-samples/binks-executable-war).
+See [binks-executable-jar sample](https://github.com/philwebb/binks/tree/master/binks-samples/binks-executable-jar).
 
 ### WAR Files
 Jar files should be structured in the following way:
@@ -69,7 +69,7 @@ the following:
 	Start-Class: <your main class>
 	Main-Class: org.springframework.binks.WarLauncher
 
-See [binks-executable-jar sample](https://github.com/philwebb/binks/tree/master/binks-samples/binks-executable-jar).
+See [binks-executable-war sample](https://github.com/philwebb/binks/tree/master/binks-samples/binks-executable-war).
 
 ## Constraints
 
